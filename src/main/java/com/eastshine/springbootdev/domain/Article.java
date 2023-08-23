@@ -1,8 +1,13 @@
 package com.eastshine.springbootdev.domain;
 
 import jakarta.persistence.*;
+import lombok.AccessLevel;
 import lombok.Builder;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
 
+@Getter
+@NoArgsConstructor(access = AccessLevel.PROTECTED)
 @Entity
 public class Article {
 
@@ -21,23 +26,6 @@ public class Article {
     public Article(String title, String content) {
         this.title = title;
         this.content = content;
-    }
-
-    protected Article() { // 기본 생성자
-
-    }
-
-    // Getter
-    public Long getId() {
-        return id;
-    }
-
-    public String getTitle() {
-        return title;
-    }
-
-    public String getContent() {
-        return content;
     }
 
 }
