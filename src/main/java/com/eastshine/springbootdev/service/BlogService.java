@@ -6,6 +6,8 @@ import com.eastshine.springbootdev.repository.BlogRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 @RequiredArgsConstructor // final이 붙거나 @NotNull 이 붙은 필드의 생성자 추가
 @Service // 빈으로 등록
 public class BlogService {
@@ -17,5 +19,8 @@ public class BlogService {
         return blogRepository.save(request.toEntity());
     }
 
+    public List<Article> findAll() {
+        return blogRepository.findAll();
+    }
 
 }
