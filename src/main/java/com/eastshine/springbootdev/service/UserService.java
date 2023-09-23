@@ -1,5 +1,6 @@
 package com.eastshine.springbootdev.service;
 
+
 import com.eastshine.springbootdev.domain.User;
 import com.eastshine.springbootdev.dto.AddUserRequest;
 import com.eastshine.springbootdev.repository.UserRepository;
@@ -10,6 +11,7 @@ import org.springframework.stereotype.Service;
 @RequiredArgsConstructor
 @Service
 public class UserService {
+
     private final UserRepository userRepository;
     private final BCryptPasswordEncoder bCryptPasswordEncoder;
 
@@ -19,4 +21,5 @@ public class UserService {
                 .password(bCryptPasswordEncoder.encode(dto.getPassword()))
                 .build()).getId();
     }
+
 }
