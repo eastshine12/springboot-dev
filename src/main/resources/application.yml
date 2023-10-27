@@ -14,3 +14,7 @@ spring:
   devtools:
     restart:
       enabled: true
+
+jwt:
+  issuer: eastshine0@gmail.com
+  secret_key: myJwtSecretKey-easthsine
